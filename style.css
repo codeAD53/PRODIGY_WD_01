@@ -1,0 +1,74 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+ }
+
+ nav#navbar {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     background-color: transparent;
+     padding: 15px 30px;
+     transition: background-color 0.3s ease, color 0.3s ease;
+     z-index: 1000;
+ }
+
+ nav#navbar ul {
+     list-style: none;
+     display: flex;
+     justify-content: right;
+     gap: 30px;
+ }
+
+ nav#navbar a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;    
+ }
+
+ nav#navbar a:hover{
+    color: #ff4081
+ }
+
+ section{
+    height: 100vh;
+    padding: 100px 50px 50px;
+ }
+
+ #home{
+    background: url('https://picsum.photos/id/1005/1920/1080') no-repeat center center/cover;
+    background-blend-mode: darken;
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+ }
+ #home::before{
+    content: '';
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 0;
+ }
+
+ #home h1, #home p{
+    position: relative;
+    z-index: 1;
+ }
+ #about, #services, #contact{
+    background-color: #f2f2f2;
+    color: #333;
+ }
+
+ #navbar a.active{
+    color: #ff4081;
+    border-bottom: 2px solid #ff4081;
+ }
+
